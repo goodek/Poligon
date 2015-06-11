@@ -1,5 +1,8 @@
 package pl.bartoszjanik.poligon.hfdp.weatherdata;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Created by bjanik on 2015-06-10.
  */
@@ -7,11 +10,11 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
 
     private float temperature;
     private float humidity;
-    private Subject weatherData;
+    private Observable weatherData;
 
-    public CurrentConditionDisplay(Subject weatherData) {
+    public CurrentConditionDisplay(Observable weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        weatherData.addObserver(this);
     }
 
     @Override
@@ -20,9 +23,12 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        this.temperature = temp;
-        this.humidity = humidity;
-        display();
+    public void update(Observable obs, Object arg) {
+        if (obs instanceof WeatherData) {
+            WeatherData wd = (WeatherData)obs;
+            this.temperature = wd.getTemperature();
+            this.humidity = wd.getHumidity();
+            display();
+        }
     }
 }

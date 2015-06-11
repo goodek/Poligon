@@ -1,40 +1,23 @@
 package pl.bartoszjanik.poligon.hfdp.weatherdata;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Observable;
 
 /**
  * Created by bjanik on 2015-06-10.
  */
-public class WeatherData implements Subject {
+public class WeatherData extends Observable {
 
-    private List<Observer> observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
     public WeatherData() {
-        observers = new ArrayList<>();
+
     }
 
-    @Override
-    public void registerObserver(Observer observer) {
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers() {
-        for (Observer o : observers) {
-            o.update(temperature, humidity, pressure);
-        }
-    }
 
     private void measurementsChanged() {
+        setChanged();
         notifyObservers();
     }
 
@@ -43,5 +26,17 @@ public class WeatherData implements Subject {
         this.humidity = humidity;
         this.pressure = pressure;
         measurementsChanged();
+    }
+
+    public float getTemperature() {
+        return temperature;
+    }
+
+    public float getHumidity() {
+        return humidity;
+    }
+
+    public float getPressure() {
+        return pressure;
     }
 }
