@@ -1,13 +1,13 @@
 package pl.bartoszjanik.poligon.hfdp;
 
-import pl.bartoszjanik.poligon.hfdp.starbuzz.Beverage;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.beverages.DarkRoast;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.beverages.Espresso;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.beverages.HouseBlend;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.condiments.Milk;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.condiments.Mocha;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.condiments.Soy;
-import pl.bartoszjanik.poligon.hfdp.starbuzz.condiments.Whip;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.Beverage;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.beverages.DarkRoast;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.beverages.Espresso;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.beverages.HouseBlend;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.condiments.Milk;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.condiments.Mocha;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.condiments.Soy;
+import pl.bartoszjanik.poligon.hfdp.decoratorpattern.condiments.Whip;
 
 /**
  * Created by bjanik on 2015-06-11.

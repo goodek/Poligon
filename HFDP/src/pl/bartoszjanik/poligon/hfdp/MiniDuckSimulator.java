@@ -1,9 +1,9 @@
 package pl.bartoszjanik.poligon.hfdp;
 
-import pl.bartoszjanik.poligon.hfdp.ducks.Duck;
-import pl.bartoszjanik.poligon.hfdp.ducks.MallardDuck;
-import pl.bartoszjanik.poligon.hfdp.ducks.ModelDuck;
-import pl.bartoszjanik.poligon.hfdp.ducks.behaviorsimpl.FlyRocketPowered;
+import pl.bartoszjanik.poligon.hfdp.strategypattern.Duck;
+import pl.bartoszjanik.poligon.hfdp.strategypattern.MallardDuck;
+import pl.bartoszjanik.poligon.hfdp.strategypattern.ModelDuck;
+import pl.bartoszjanik.poligon.hfdp.strategypattern.behaviorsimpl.FlyRocketPowered;
 
 /**
  * Created by bjanik on 2015-06-10.

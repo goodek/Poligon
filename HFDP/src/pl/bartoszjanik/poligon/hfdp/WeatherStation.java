@@ -1,7 +1,7 @@
 package pl.bartoszjanik.poligon.hfdp;
 
-import pl.bartoszjanik.poligon.hfdp.weatherdata.CurrentConditionDisplay;
-import pl.bartoszjanik.poligon.hfdp.weatherdata.WeatherData;
+import pl.bartoszjanik.poligon.hfdp.observerpattern.CurrentConditionDisplay;
+import pl.bartoszjanik.poligon.hfdp.observerpattern.WeatherData;
 
 /**
  * Created by bjanik on 2015-06-10.
